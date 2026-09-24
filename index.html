@@ -1,0 +1,760 @@
+<!DOCTYPE html>
+<html lang="en" class="scroll-smooth">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Shubham Kumar | ECE & Software Engineer</title>
+  <!-- Tailwind CSS CDN -->
+  <script src="https://cdn.tailwindcss.com"></script>
+  <!-- FontAwesome Icons -->
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css" />
+  <!-- Google Fonts -->
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com">
+  <link href="https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@400;500;600;700;800;900&family=JetBrains+Mono:wght@500;600;700&family=Caveat:wght@700&display=swap" rel="stylesheet">
+
+  <script>
+    tailwind.config = {
+      darkMode: 'class',
+      theme: {
+        extend: {
+          fontFamily: {
+            sans: ['"Plus Jakarta Sans"', 'sans-serif'],
+            mono: ['"JetBrains Mono"', 'monospace'],
+            hand: ['"Caveat"', 'cursive'],
+          }
+        }
+      }
+    }
+  </script>
+</head>
+<body class="bg-[#fcfaf2] text-slate-900 font-sans antialiased selection:bg-amber-300 selection:text-slate-950 relative overflow-x-hidden">
+
+  <!-- Ambient Warm Glow Gradients -->
+  <div class="fixed inset-0 pointer-events-none z-0 overflow-hidden">
+    <div class="absolute -top-32 -left-20 w-[650px] h-[650px] bg-gradient-to-br from-amber-200/50 via-yellow-100/40 to-transparent blur-[140px] rounded-full"></div>
+    <div class="absolute top-[18%] -right-24 w-[700px] h-[700px] bg-gradient-to-bl from-orange-200/35 via-amber-100/30 to-transparent blur-[150px] rounded-full"></div>
+    <div class="absolute top-[50%] left-[-10%] w-[600px] h-[600px] bg-gradient-to-tr from-yellow-200/40 via-amber-100/30 to-transparent blur-[150px] rounded-full"></div>
+    <div class="absolute -bottom-32 right-[5%] w-[750px] h-[550px] bg-gradient-to-t from-amber-300/30 via-yellow-100/30 to-transparent blur-[160px] rounded-full"></div>
+  </div>
+
+  <!-- Navigation Bar -->
+  <nav class="fixed top-0 left-0 right-0 z-50 backdrop-blur-xl bg-[#fffefb]/90 border-b border-amber-200 shadow-xs">
+    <div class="max-w-6xl mx-auto px-6 h-16 flex items-center justify-between">
+      <a href="#hero" class="text-xl font-bold font-mono tracking-tight text-slate-950 flex items-center gap-2 group">
+        <div class="w-9 h-9 rounded-xl bg-gradient-to-tr from-amber-500 via-orange-500 to-amber-600 p-[1.5px] transition duration-300 group-hover:scale-105 shadow-md shadow-amber-500/20">
+          <div class="w-full h-full bg-[#fffcf5] rounded-[10px] flex items-center justify-center font-black text-amber-700 text-sm">
+            SK
+          </div>
+        </div>
+        <span>Shubham <span class="text-amber-700 font-bold">Kumar</span></span>
+      </a>
+
+      <div class="hidden md:flex items-center gap-7 text-sm font-bold text-slate-800">
+        <a href="#pinboard" class="hover:text-amber-700 transition-colors flex items-center gap-1.5"><i class="fa-solid fa-note-sticky text-amber-600 text-xs"></i> Scratchpad</a>
+        <a href="#skills" class="hover:text-amber-700 transition-colors">Skills</a>
+        <a href="#projects" class="hover:text-amber-700 transition-colors">Projects</a>
+        <a href="#opensource" class="hover:text-amber-700 transition-colors">Open Source</a>
+        <a href="#experience" class="hover:text-amber-700 transition-colors">Milestones</a>
+      </div>
+
+      <div class="flex items-center gap-3">
+        <a href="mailto:shubhamjrd4559@gmail.com" class="px-4 py-2 text-xs font-bold rounded-xl bg-amber-600 hover:bg-amber-700 text-white shadow-md shadow-amber-600/20 transition transform hover:-translate-y-0.5">
+          <i class="fa-regular fa-paper-plane mr-1.5"></i> Let's Connect
+        </a>
+      </div>
+    </div>
+  </nav>
+
+  <!-- Hero Section with Circular Photo Frame -->
+  <header id="hero" class="relative z-10 pt-32 pb-16 md:pt-40 md:pb-24">
+    <div class="max-w-5xl mx-auto px-6 text-center">
+
+      <!-- College Status Badge -->
+      <div class="inline-flex p-[1px] rounded-full bg-gradient-to-r from-amber-400 via-orange-400 to-yellow-500 mb-6 shadow-xs">
+        <div class="px-4 py-1.5 rounded-full bg-amber-50/95 backdrop-blur-md flex items-center gap-2 text-xs font-mono font-bold text-amber-950">
+          <span class="w-2 h-2 rounded-full bg-emerald-600 animate-ping"></span>
+          <span>3rd Year B.Tech ECE • Techno Main Salt Lake, Kolkata</span>
+        </div>
+      </div>
+
+      <!-- Circular Photo Frame -->
+      <div class="relative mx-auto w-36 h-36 sm:w-44 sm:h-44 mb-6">
+        <!-- Glow Layer -->
+        <div class="absolute -inset-1.5 rounded-full bg-gradient-to-r from-amber-400 via-orange-400 to-yellow-500 opacity-60 blur-md"></div>
+        
+        <!-- Gradient Border Ring -->
+        <div class="relative w-full h-full rounded-full p-1 bg-gradient-to-tr from-amber-500 via-orange-400 to-yellow-400 shadow-xl shadow-amber-600/20 overflow-hidden">
+          <img 
+            src="MyPhoto.jpg" 
+            onerror="this.onerror=null; this.src='https://github.com/shubhamjrd4559-sudo.png';" 
+            alt="Shubham Kumar" 
+            class="w-full h-full object-cover object-top rounded-full bg-amber-100 border-2 border-white shadow-inner"
+          />
+        </div>
+
+        <!-- Active Status Indicator -->
+        <div class="absolute bottom-1.5 right-2 w-5 h-5 rounded-full bg-emerald-500 border-2 border-white shadow-md flex items-center justify-center z-10" title="Active">
+          <div class="w-1.5 h-1.5 rounded-full bg-white"></div>
+        </div>
+      </div>
+
+      <h1 class="text-4xl sm:text-6xl lg:text-7xl font-black text-slate-950 tracking-tight leading-tight mb-5">
+        Hi, I'm <span class="text-transparent bg-clip-text bg-gradient-to-r from-amber-700 via-orange-600 to-amber-800">Shubham Kumar</span>
+      </h1>
+
+      <!-- Intro Paragraph (Normal font CGPA) -->
+      <p class="max-w-2xl mx-auto text-base sm:text-lg text-slate-800 font-medium leading-relaxed mb-8">
+        3rd-year Electronics & Communication Engineering undergrad at <strong class="text-slate-950 font-bold">Techno Main Salt Lake</strong> with a Cumulative GPA of 8.23 / 10. Passionate Software Developer building real-time AI web platforms, contributing to production open-source engines, and engineering embedded IoT hardware.
+      </p>
+
+      <!-- Contact Ribbons -->
+      <div class="flex flex-wrap items-center justify-center gap-3 text-xs font-mono font-bold text-slate-800 mb-10">
+        <span class="px-3.5 py-1.5 rounded-lg bg-white border border-amber-300 shadow-xs flex items-center gap-1.5">
+          <i class="fa-solid fa-location-dot text-amber-700"></i> Kolkata, West Bengal, India
+        </span>
+        <a href="tel:+919608547081" class="px-3.5 py-1.5 rounded-lg bg-white border border-amber-300 shadow-xs flex items-center gap-1.5 hover:border-amber-500 transition">
+          <i class="fa-solid fa-phone text-emerald-700"></i> +91 9608547081
+        </a>
+        <a href="mailto:shubhamjrd4559@gmail.com" class="px-3.5 py-1.5 rounded-lg bg-white border border-amber-300 shadow-xs flex items-center gap-1.5 hover:border-amber-500 transition">
+          <i class="fa-regular fa-envelope text-orange-700"></i> shubhamjrd4559@gmail.com
+        </a>
+      </div>
+
+      <!-- Action Buttons -->
+      <div class="flex flex-wrap items-center justify-center gap-4">
+        <a href="#projects" class="px-7 py-3.5 rounded-xl bg-gradient-to-r from-amber-600 via-orange-600 to-amber-700 text-white font-bold text-sm shadow-lg shadow-amber-600/25 hover:scale-105 transition transform">
+          View Projects <i class="fa-solid fa-arrow-down ml-2"></i>
+        </a>
+        <a href="#pinboard" class="px-7 py-3.5 rounded-xl bg-white border border-amber-300 hover:border-amber-500 text-amber-950 font-bold text-sm transition transform hover:scale-105 flex items-center gap-2 shadow-xs">
+          <i class="fa-solid fa-thumbtack text-amber-700"></i> Lab Scratchpad
+        </a>
+      </div>
+
+      <!-- Live Coding Profiles -->
+      <div class="mt-12 flex flex-wrap items-center justify-center gap-3 text-xs font-mono font-bold">
+        <a href="https://github.com/shubhamjrd4559-sudo" target="_blank" class="px-3.5 py-2 rounded-xl bg-white border border-amber-300 hover:border-amber-500 text-slate-900 flex items-center gap-2 transition hover:scale-105 shadow-xs">
+          <i class="fa-brands fa-github text-slate-950 text-sm"></i> 16 Repos • 198 Commits
+        </a>
+        <a href="https://leetcode.com/u/Shubh_5585" target="_blank" class="px-3.5 py-2 rounded-xl bg-amber-100 border border-amber-400 hover:border-amber-600 text-amber-950 flex items-center gap-2 transition hover:scale-105 shadow-xs">
+          <i class="fa-solid fa-code text-amber-800 text-sm"></i> LeetCode: Shubh_5585
+        </a>
+        <a href="https://www.codechef.com/users/shubham_1855" target="_blank" class="px-3.5 py-2 rounded-xl bg-orange-100 border border-orange-400 hover:border-orange-600 text-orange-950 flex items-center gap-2 transition hover:scale-105 shadow-xs">
+          <i class="fa-solid fa-utensils text-orange-800 text-sm"></i> CodeChef: shubham_1855
+        </a>
+        <a href="https://linkedin.com/in/shubham-kumar-6bb4b7344" target="_blank" class="px-3.5 py-2 rounded-xl bg-blue-100 border border-blue-300 hover:border-blue-500 text-blue-950 flex items-center gap-2 transition hover:scale-105 shadow-xs">
+          <i class="fa-brands fa-linkedin text-blue-700 text-sm"></i> LinkedIn
+        </a>
+      </div>
+    </div>
+  </header>
+
+  <!-- Sticky Notes Pinboard Section (Clean Circular Push-Pins) -->
+  <section id="pinboard" class="relative z-10 py-16 border-y border-amber-200 bg-[#faf6eb]/90 backdrop-blur-md">
+    <div class="max-w-6xl mx-auto px-6">
+      
+      <div class="flex flex-col md:flex-row md:items-end justify-between mb-12 gap-4">
+        <div>
+          <div class="inline-flex items-center gap-2 px-3 py-1 rounded-full bg-amber-200 border border-amber-300 text-amber-950 text-xs font-mono font-bold mb-2">
+            <i class="fa-solid fa-thumbtack text-amber-800"></i> Dev Scratchpad
+          </div>
+          <h2 class="text-3xl md:text-4xl font-extrabold text-slate-950">Sticky Notes & Engineering Insights</h2>
+        </div>
+        <p class="text-slate-800 text-xs font-mono font-semibold max-w-sm">
+          Interactive dev reflections, hardware calibration notes, and architectural decisions. Hover over any note to straighten it!
+        </p>
+      </div>
+
+      <!-- Notes Grid -->
+      <div class="grid sm:grid-cols-2 lg:grid-cols-3 gap-8 pt-4 pb-6">
+
+        <!-- Note 1: Classic Yellow (CodeSense AI Sprint) -->
+        <div class="relative group transition-all duration-300 transform -rotate-2 hover:rotate-0 hover:scale-105 hover:z-20 cursor-default">
+          <div class="absolute -top-2.5 left-1/2 -translate-x-1/2 w-4 h-4 rounded-full bg-red-600 border-2 border-white shadow-md z-10 flex items-center justify-center">
+            <div class="w-1 h-1 rounded-full bg-white/90"></div>
+          </div>
+          <div class="p-6 rounded-sm bg-[#fef08a] text-yellow-950 shadow-xl shadow-amber-950/10 min-h-[250px] flex flex-col justify-between border-b-4 border-r-4 border-yellow-300">
+            <div>
+              <div class="flex items-center justify-between border-b border-yellow-900/30 pb-2 mb-3">
+                <span class="font-hand text-2xl font-bold tracking-wide text-yellow-950">Sprint Log #24</span>
+                <span class="text-[11px] font-mono font-bold bg-yellow-300 px-2 py-0.5 rounded text-yellow-950">CodeSense AI</span>
+              </div>
+              <p class="text-xs font-mono font-medium text-yellow-950 leading-relaxed mb-3">
+                Implemented sliding-window IP rate limiting (max 7 req/min). Extracted real client IP correctly behind Vercel edge reverse proxy headers to prevent abuse.
+              </p>
+            </div>
+            <div class="text-[11px] font-mono font-bold flex items-center justify-between text-yellow-950 pt-2 border-t border-yellow-900/20">
+              <span>Next: Multi-file STDIN</span>
+              <span>Sep 2026</span>
+            </div>
+          </div>
+        </div>
+
+        <!-- Note 2: Cyber Pink (GSSoC Chess Logic) -->
+        <div class="relative group transition-all duration-300 transform rotate-2 hover:rotate-0 hover:scale-105 hover:z-20 cursor-default">
+          <div class="absolute -top-2.5 left-1/2 -translate-x-1/2 w-4 h-4 rounded-full bg-rose-600 border-2 border-white shadow-md z-10 flex items-center justify-center">
+            <div class="w-1 h-1 rounded-full bg-white/90"></div>
+          </div>
+          <div class="p-6 rounded-sm bg-[#fbcfe8] text-pink-950 shadow-xl shadow-rose-950/10 min-h-[250px] flex flex-col justify-between border-b-4 border-r-4 border-pink-300">
+            <div>
+              <div class="flex items-center justify-between border-b border-pink-900/30 pb-2 mb-3">
+                <span class="font-hand text-2xl font-bold tracking-wide text-pink-950">GSSoC Takeaway</span>
+                <span class="text-[11px] font-mono font-bold bg-pink-300 px-2 py-0.5 rounded text-pink-950">Checkora</span>
+              </div>
+              <p class="text-xs font-mono font-medium text-pink-950 leading-relaxed mb-3">
+                Fixed password reset token reuse & throttled request brute force attacks. Handled match draws from threefold repetition in engine chess rules.
+              </p>
+            </div>
+            <div class="text-[11px] font-mono font-bold flex items-center justify-between text-pink-950 pt-2 border-t border-pink-900/20">
+              <span>10 Merged PRs</span>
+              <span>Open-Source</span>
+            </div>
+          </div>
+        </div>
+
+        <!-- Note 3: Emerald Mint (IoT & ESP32 Lab) -->
+        <div class="relative group transition-all duration-300 transform -rotate-1 hover:rotate-0 hover:scale-105 hover:z-20 cursor-default">
+          <div class="absolute -top-2.5 left-1/2 -translate-x-1/2 w-4 h-4 rounded-full bg-emerald-600 border-2 border-white shadow-md z-10 flex items-center justify-center">
+            <div class="w-1 h-1 rounded-full bg-white/90"></div>
+          </div>
+          <div class="p-6 rounded-sm bg-[#bbf7d0] text-emerald-950 shadow-xl shadow-emerald-950/10 min-h-[250px] flex flex-col justify-between border-b-4 border-r-4 border-emerald-300">
+            <div>
+              <div class="flex items-center justify-between border-b border-emerald-900/30 pb-2 mb-3">
+                <span class="font-hand text-2xl font-bold tracking-wide text-emerald-950">Hardware Lab Note</span>
+                <span class="text-[11px] font-mono font-bold bg-emerald-300 px-2 py-0.5 rounded text-emerald-950">ESP32 + ACS712</span>
+              </div>
+              <p class="text-xs font-mono font-medium text-emerald-950 leading-relaxed mb-3">
+                ESP32 ADC is non-linear around lower voltage limits. Implemented a 100-sample RMS circular buffer in Embedded C to stabilize AC current readings.
+              </p>
+            </div>
+            <div class="text-[11px] font-mono font-bold flex items-center justify-between text-emerald-950 pt-2 border-t border-emerald-900/20">
+              <span>Calibrated at 3.3V</span>
+              <span>Smart Energy</span>
+            </div>
+          </div>
+        </div>
+
+        <!-- Note 4: Sky Blue (DSA Golden Rule) -->
+        <div class="relative group transition-all duration-300 transform rotate-3 hover:rotate-0 hover:scale-105 hover:z-20 cursor-default">
+          <div class="absolute -top-2.5 left-1/2 -translate-x-1/2 w-4 h-4 rounded-full bg-cyan-700 border-2 border-white shadow-md z-10 flex items-center justify-center">
+            <div class="w-1 h-1 rounded-full bg-white/90"></div>
+          </div>
+          <div class="p-6 rounded-sm bg-[#bae6fd] text-sky-950 shadow-xl shadow-sky-950/10 min-h-[250px] flex flex-col justify-between border-b-4 border-r-4 border-sky-300">
+            <div>
+              <div class="flex items-center justify-between border-b border-sky-900/30 pb-2 mb-3">
+                <span class="font-hand text-2xl font-bold tracking-wide text-sky-950">Problem Solving</span>
+                <span class="text-[11px] font-mono font-bold bg-sky-300 px-2 py-0.5 rounded text-sky-950">160 Days GFG</span>
+              </div>
+              <p class="text-xs font-mono font-medium text-sky-950 leading-relaxed mb-3">
+                "When solving Trees and Graphs: Don't guess the recursive state in code first. Trace 3 levels on paper, write down the base case, then simulate boundary nodes."
+              </p>
+            </div>
+            <div class="text-[11px] font-mono font-bold flex items-center justify-between text-sky-950 pt-2 border-t border-sky-900/20">
+              <span>Streak: 160/160 Days</span>
+              <span>C++ STL</span>
+            </div>
+          </div>
+        </div>
+
+        <!-- Note 5: Lavender (ECE Signal Theory) -->
+        <div class="relative group transition-all duration-300 transform -rotate-2 hover:rotate-0 hover:scale-105 hover:z-20 cursor-default">
+          <div class="absolute -top-2.5 left-1/2 -translate-x-1/2 w-4 h-4 rounded-full bg-purple-600 border-2 border-white shadow-md z-10 flex items-center justify-center">
+            <div class="w-1 h-1 rounded-full bg-white/90"></div>
+          </div>
+          <div class="p-6 rounded-sm bg-[#e9d5ff] text-purple-950 shadow-xl shadow-purple-950/10 min-h-[250px] flex flex-col justify-between border-b-4 border-r-4 border-purple-300">
+            <div>
+              <div class="flex items-center justify-between border-b border-purple-900/30 pb-2 mb-3">
+                <span class="font-hand text-2xl font-bold tracking-wide text-purple-950">Signal Lab Insight</span>
+                <span class="text-[11px] font-mono font-bold bg-purple-300 px-2 py-0.5 rounded text-purple-950">EVLab</span>
+              </div>
+              <p class="text-xs font-mono font-medium text-purple-950 leading-relaxed mb-3">
+                In digital modulation, noise isn't uniform—it's Gaussian AWGN. Used Box-Muller transform to deterministically generate white noise in 2D I/Q constellation space.
+              </p>
+            </div>
+            <div class="text-[11px] font-mono font-bold flex items-center justify-between text-purple-950 pt-2 border-t border-purple-900/20">
+              <span>BER Simulation</span>
+              <span>ECE Visuals</span>
+            </div>
+          </div>
+        </div>
+
+        <!-- Note 6: Coral Orange (Current Focus) -->
+        <div class="relative group transition-all duration-300 transform rotate-1 hover:rotate-0 hover:scale-105 hover:z-20 cursor-default">
+          <div class="absolute -top-2.5 left-1/2 -translate-x-1/2 w-4 h-4 rounded-full bg-amber-700 border-2 border-white shadow-md z-10 flex items-center justify-center">
+            <div class="w-1 h-1 rounded-full bg-white/90"></div>
+          </div>
+          <div class="p-6 rounded-sm bg-[#fed7aa] text-orange-950 shadow-xl shadow-orange-950/10 min-h-[250px] flex flex-col justify-between border-b-4 border-r-4 border-orange-300">
+            <div>
+              <div class="flex items-center justify-between border-b border-orange-900/30 pb-2 mb-3">
+                <span class="font-hand text-2xl font-bold tracking-wide text-orange-950">Current Focus</span>
+                <span class="text-[11px] font-mono font-bold bg-orange-300 px-2 py-0.5 rounded text-orange-950">Active</span>
+              </div>
+              <p class="text-xs font-mono font-medium text-orange-950 leading-relaxed mb-3">
+                • 3rd Year ECE @ TMSL<br/>
+                • 400+ algorithmic problems solved<br/>
+                • AWS Cloud Architect certified<br/>
+                • Preparing for software & embedded engineering roles
+              </p>
+            </div>
+            <div class="text-[11px] font-mono font-bold flex items-center justify-between text-orange-950 pt-2 border-t border-orange-900/20">
+              <span>Status: Available</span>
+              <span>Kolkata, IN</span>
+            </div>
+          </div>
+        </div>
+
+      </div>
+    </div>
+  </section>
+
+  <!-- Technical Skills Section -->
+  <section id="skills" class="relative z-10 py-16 bg-[#fffdf8]">
+    <div class="max-w-5xl mx-auto px-6">
+      <div class="text-center max-w-xl mx-auto mb-12">
+        <span class="px-3 py-1 rounded-full text-xs font-mono font-bold uppercase tracking-wider bg-amber-200 border border-amber-300 text-amber-950">Toolkit & Stack</span>
+        <h2 class="text-3xl md:text-4xl font-extrabold text-slate-950 mt-3">Engineering Arsenal</h2>
+      </div>
+
+      <div class="grid sm:grid-cols-2 lg:grid-cols-3 gap-6">
+
+        <!-- Languages & Algorithms -->
+        <div class="p-6 rounded-2xl bg-white border border-amber-300 hover:border-amber-500 transition-all duration-300 shadow-sm group">
+          <div class="w-12 h-12 rounded-xl bg-amber-100 text-amber-800 flex items-center justify-center text-xl mb-5 shadow-xs group-hover:scale-110 transition">
+            <i class="fa-solid fa-terminal"></i>
+          </div>
+          <h3 class="text-lg font-bold text-slate-950 mb-2">Languages & DSA</h3>
+          <p class="text-xs font-mono text-amber-800 font-bold uppercase tracking-wide mb-2">Core Languages:</p>
+          <div class="flex flex-wrap gap-1.5 text-xs font-mono mb-4">
+            <span class="px-2.5 py-1 rounded-lg bg-amber-50 text-slate-900 border border-amber-300 font-bold">C++</span>
+            <span class="px-2.5 py-1 rounded-lg bg-amber-50 text-slate-900 border border-amber-300 font-bold">C</span>
+            <span class="px-2.5 py-1 rounded-lg bg-amber-50 text-slate-900 border border-amber-300 font-bold">Python</span>
+            <span class="px-2.5 py-1 rounded-lg bg-amber-50 text-slate-900 border border-amber-300 font-bold">TypeScript</span>
+            <span class="px-2.5 py-1 rounded-lg bg-amber-50 text-slate-900 border border-amber-300 font-bold">JavaScript</span>
+            <span class="px-2.5 py-1 rounded-lg bg-amber-50 text-slate-900 border border-amber-300 font-bold">SQL</span>
+            <span class="px-2.5 py-1 rounded-lg bg-amber-50 text-slate-900 border border-amber-300 font-bold">Embedded C</span>
+          </div>
+          <p class="text-xs text-slate-800 font-mono font-medium">Trees, Graphs, Dynamic Programming, OOP, Memory Management</p>
+        </div>
+
+        <!-- Full-Stack & AI Systems -->
+        <div class="p-6 rounded-2xl bg-white border border-amber-300 hover:border-orange-500 transition-all duration-300 shadow-sm group">
+          <div class="w-12 h-12 rounded-xl bg-orange-100 text-orange-800 flex items-center justify-center text-xl mb-5 shadow-xs group-hover:scale-110 transition">
+            <i class="fa-solid fa-network-wired"></i>
+          </div>
+          <h3 class="text-lg font-bold text-slate-950 mb-2">Web & AI Systems</h3>
+          <p class="text-xs font-mono text-orange-800 font-bold uppercase tracking-wide mb-2">Frameworks & APIs:</p>
+          <div class="flex flex-wrap gap-1.5 text-xs font-mono">
+            <span class="px-2.5 py-1 rounded-lg bg-orange-50 text-slate-900 border border-orange-300 font-bold">Django</span>
+            <span class="px-2.5 py-1 rounded-lg bg-orange-50 text-slate-900 border border-orange-300 font-bold">REST APIs</span>
+            <span class="px-2.5 py-1 rounded-lg bg-orange-50 text-slate-900 border border-orange-300 font-bold">Tailwind CSS</span>
+            <span class="px-2.5 py-1 rounded-lg bg-orange-50 text-slate-900 border border-orange-300 font-bold">Monaco Editor</span>
+            <span class="px-2.5 py-1 rounded-lg bg-orange-50 text-slate-900 border border-orange-300 font-bold">TensorFlow</span>
+            <span class="px-2.5 py-1 rounded-lg bg-orange-50 text-slate-900 border border-orange-300 font-bold">Streamlit</span>
+          </div>
+        </div>
+
+        <!-- Embedded & Cloud DevOps -->
+        <div class="p-6 rounded-2xl bg-white border border-amber-300 hover:border-emerald-500 transition-all duration-300 shadow-sm group sm:col-span-2 lg:col-span-1">
+          <div class="w-12 h-12 rounded-xl bg-emerald-100 text-emerald-800 flex items-center justify-center text-xl mb-5 shadow-xs group-hover:scale-110 transition">
+            <i class="fa-solid fa-microchip"></i>
+          </div>
+          <h3 class="text-lg font-bold text-slate-950 mb-2">Hardware & Cloud</h3>
+          <p class="text-xs font-mono text-emerald-800 font-bold uppercase tracking-wide mb-2">IoT & Infrastructure:</p>
+          <div class="flex flex-wrap gap-1.5 text-xs font-mono">
+            <span class="px-2.5 py-1 rounded-lg bg-emerald-50 text-slate-900 border border-emerald-300 font-bold">ESP32</span>
+            <span class="px-2.5 py-1 rounded-lg bg-emerald-50 text-slate-900 border border-emerald-300 font-bold">Arduino IDE</span>
+            <span class="px-2.5 py-1 rounded-lg bg-emerald-50 text-slate-900 border border-emerald-300 font-bold">ACS712 Sensor</span>
+            <span class="px-2.5 py-1 rounded-lg bg-emerald-50 text-slate-900 border border-emerald-300 font-bold">AWS Cloud</span>
+            <span class="px-2.5 py-1 rounded-lg bg-emerald-50 text-slate-900 border border-emerald-300 font-bold">Vercel</span>
+            <span class="px-2.5 py-1 rounded-lg bg-emerald-50 text-slate-900 border border-emerald-300 font-bold">Linux CLI</span>
+          </div>
+        </div>
+
+      </div>
+    </div>
+  </section>
+
+  <!-- Featured Projects Section -->
+  <section id="projects" class="relative z-10 py-16 border-t border-amber-200">
+    <div class="max-w-5xl mx-auto px-6">
+      <div class="flex flex-col md:flex-row md:items-end justify-between mb-12 gap-4">
+        <div>
+          <span class="px-3 py-1 rounded-full text-xs font-mono font-bold uppercase tracking-wider bg-amber-200 border border-amber-300 text-amber-950">Featured Builds</span>
+          <h2 class="text-3xl md:text-4xl font-extrabold text-slate-950 mt-3">Projects & Repositories</h2>
+        </div>
+        <p class="text-slate-800 text-xs font-mono font-semibold max-w-md">Production web applications, machine learning tools, and IoT implementations.</p>
+      </div>
+
+      <div class="grid md:grid-cols-2 gap-8">
+
+        <!-- Flagship Project: CodeSense AI -->
+        <div class="md:col-span-2 relative group rounded-3xl p-[1px] bg-gradient-to-r from-amber-500 via-orange-500 to-yellow-500 shadow-md">
+          <div class="h-full rounded-[23px] bg-white p-8">
+            <div class="flex flex-col sm:flex-row sm:items-center justify-between gap-4 mb-4">
+              <div>
+                <span class="text-xs font-mono px-3 py-1 rounded-full bg-amber-100 text-amber-950 border border-amber-300 font-bold">
+                  Flagship Project • Real-Time AI Code Reviewer & Web IDE
+                </span>
+                <h3 class="text-2xl sm:text-3xl font-black text-slate-950 mt-3 group-hover:text-amber-700 transition">CodeSense AI</h3>
+              </div>
+              <div class="flex items-center gap-3">
+                <a href="https://github.com/shubhamjrd4559-sudo/CodeSenseAI" target="_blank" class="px-4 py-2 rounded-xl bg-amber-50 hover:bg-amber-100 border border-amber-300 text-xs font-mono font-bold text-amber-950 flex items-center gap-1.5 transition">
+                  <i class="fa-brands fa-github text-sm"></i> Source Code
+                </a>
+              </div>
+            </div>
+
+            <p class="text-sm text-slate-800 leading-relaxed mb-6 font-medium">
+              A full-stack web IDE and automated AI code reviewer that streams intelligent code reviews, spots memory bottlenecks, and executes programs interactively in an isolated runtime environment.
+            </p>
+
+            <div class="grid sm:grid-cols-2 gap-4 mb-6">
+              <div class="p-4 rounded-xl bg-amber-50/70 border border-amber-300">
+                <p class="text-xs font-mono font-bold text-amber-900 mb-1"><i class="fa-solid fa-robot mr-1.5 text-amber-700"></i> Streaming AI Assistance</p>
+                <p class="text-xs text-slate-800 font-medium leading-normal">Orchestrates Llama 3.1 70B via Nvidia NIM to explain code line-by-line, detect edge cases, and propose algorithmic fixes.</p>
+              </div>
+              <div class="p-4 rounded-xl bg-amber-50/70 border border-amber-300">
+                <p class="text-xs font-mono font-bold text-orange-900 mb-1"><i class="fa-solid fa-code mr-1.5 text-orange-700"></i> Monaco Code Editor</p>
+                <p class="text-xs text-slate-800 font-medium leading-normal">VS Code-like editing with full syntax highlighting & linting for C++, Python, Java, and JavaScript.</p>
+              </div>
+              <div class="p-4 rounded-xl bg-amber-50/70 border border-amber-300">
+                <p class="text-xs font-mono font-bold text-emerald-900 mb-1"><i class="fa-solid fa-terminal mr-1.5 text-emerald-700"></i> Interactive STDIN Console</p>
+                <p class="text-xs text-slate-800 font-medium leading-normal">Sandboxed execution powered by Judge0 CE API, supporting dynamic standard input injection in browser console.</p>
+              </div>
+              <div class="p-4 rounded-xl bg-amber-50/70 border border-amber-300">
+                <p class="text-xs font-mono font-bold text-rose-900 mb-1"><i class="fa-solid fa-shield-halved mr-1.5 text-rose-700"></i> Sliding-Window Rate Limiter</p>
+                <p class="text-xs text-slate-800 font-medium leading-normal">Built-in 7 msgs/min sliding-window IP rate limiter with real client IP extraction behind Vercel reverse proxy.</p>
+              </div>
+            </div>
+
+            <div class="flex flex-wrap gap-2 text-xs font-mono text-slate-900 font-bold">
+              <span class="px-2.5 py-1 rounded-md bg-amber-100 border border-amber-300">Django</span>
+              <span class="px-2.5 py-1 rounded-md bg-amber-100 border border-amber-300">Monaco Editor</span>
+              <span class="px-2.5 py-1 rounded-md bg-amber-100 border border-amber-300">Llama 3.1 70B</span>
+              <span class="px-2.5 py-1 rounded-md bg-amber-100 border border-amber-300">Judge0 API</span>
+              <span class="px-2.5 py-1 rounded-md bg-amber-100 border border-amber-300">Vercel</span>
+            </div>
+          </div>
+        </div>
+
+        <!-- Project 2: Smart Energy Monitor & Controller -->
+        <div class="p-7 rounded-3xl bg-white border border-amber-300 hover:border-amber-500 transition-all shadow-sm flex flex-col justify-between group">
+          <div>
+            <div class="flex items-center justify-between mb-4">
+              <span class="text-xs font-mono px-3 py-1 rounded-full bg-emerald-100 text-emerald-950 border border-emerald-400 font-bold">
+                IoT & Embedded
+              </span>
+              <a href="https://github.com/shubhamjrd4559-sudo" target="_blank" class="hover:text-emerald-700 text-slate-600 transition" title="GitHub"><i class="fa-brands fa-github text-lg"></i></a>
+            </div>
+            <h3 class="text-xl font-bold text-slate-950 group-hover:text-emerald-800 transition mb-2">Smart Energy Monitor & Controller</h3>
+            <p class="text-xs font-mono text-emerald-800 font-bold mb-4">ESP32 • ACS712 Sensor • Arduino IDE • Cloud Telemetry</p>
+            <ul class="text-sm text-slate-800 font-medium space-y-2 mb-6">
+              <li>• Real-time energy monitoring system for household AC power tracking and remote telemetry.</li>
+              <li>• Calibrated ACS712 Hall-effect sensors with ESP32 ADC for precision RMS current reading.</li>
+              <li>• Cloud-integrated overload cut-off alerts for proactive circuit safety.</li>
+            </ul>
+          </div>
+          <div class="flex flex-wrap gap-2 text-xs font-mono font-bold text-slate-900 pt-4 border-t border-amber-200">
+            <span class="px-2.5 py-1 rounded-md bg-emerald-50 border border-emerald-300 text-emerald-950">ESP32</span>
+            <span class="px-2.5 py-1 rounded-md bg-emerald-50 border border-emerald-300 text-emerald-950">ACS712</span>
+            <span class="px-2.5 py-1 rounded-md bg-emerald-50 border border-emerald-300 text-emerald-950">IoT Telemetry</span>
+          </div>
+        </div>
+
+        <!-- Project 3: Digit Recognizer -->
+        <div class="p-7 rounded-3xl bg-white border border-amber-300 hover:border-amber-500 transition-all shadow-sm flex flex-col justify-between group">
+          <div>
+            <div class="flex items-center justify-between mb-4">
+              <span class="text-xs font-mono px-3 py-1 rounded-full bg-purple-100 text-purple-950 border border-purple-400 font-bold">
+                Deep Learning & ML
+              </span>
+              <a href="https://github.com/shubhamjrd4559-sudo/Digit_Recognizer" target="_blank" class="hover:text-purple-700 text-slate-600 transition" title="GitHub"><i class="fa-brands fa-github text-lg"></i></a>
+            </div>
+            <h3 class="text-xl font-bold text-slate-950 group-hover:text-purple-800 transition mb-2">Digit_Recognizer</h3>
+            <p class="text-xs font-mono text-purple-800 font-bold mb-4">Python • TensorFlow • CNN • Streamlit</p>
+            <ul class="text-sm text-slate-800 font-medium space-y-2 mb-6">
+              <li>• Handwritten Digit Recognition web app trained with Convolutional Neural Networks on MNIST dataset.</li>
+              <li>• Upload digit images or draw in real-time, receiving predictions with confidence breakdown.</li>
+              <li>• Lightweight interactive frontend deployed using Streamlit.</li>
+            </ul>
+          </div>
+          <div class="flex flex-wrap gap-2 text-xs font-mono font-bold text-slate-900 pt-4 border-t border-amber-200">
+            <span class="px-2.5 py-1 rounded-md bg-purple-50 border border-purple-300 text-purple-950">TensorFlow</span>
+            <span class="px-2.5 py-1 rounded-md bg-purple-50 border border-purple-300 text-purple-950">Streamlit</span>
+            <span class="px-2.5 py-1 rounded-md bg-purple-50 border border-purple-300 text-purple-950">Vision</span>
+          </div>
+        </div>
+
+      </div>
+    </div>
+  </section>
+
+  <!-- Open Source Table Section (Clean & Perfectly Aligned) -->
+  <section id="opensource" class="relative z-10 py-16 bg-[#faf6eb]/90 border-t border-amber-200">
+    <div class="max-w-5xl mx-auto px-6">
+      
+      <div class="flex flex-col md:flex-row md:items-end justify-between mb-12 gap-4">
+        <div>
+          <span class="px-3 py-1 rounded-full text-xs font-mono font-bold uppercase tracking-wider bg-amber-200 border border-amber-300 text-amber-950">Production Code</span>
+          <h2 class="text-3xl md:text-4xl font-extrabold text-slate-950 mt-3">Open Source (GSSoC) Contributions</h2>
+        </div>
+        <a href="https://github.com/shubhamjrd4559-sudo" target="_blank" class="text-xs font-mono font-bold text-amber-800 hover:text-amber-950 hover:underline flex items-center gap-1.5 transition">
+          <span>View all 11 Merged PRs on GitHub</span> <i class="fa-solid fa-arrow-up-right-from-square text-[10px]"></i>
+        </a>
+      </div>
+
+      <!-- Checkora Card Container -->
+      <div class="p-6 sm:p-8 rounded-3xl bg-white border border-amber-300 shadow-sm mb-8">
+        
+        <!-- Header row of the card -->
+        <div class="flex flex-col sm:flex-row sm:items-center justify-between gap-4 mb-6">
+          <div class="flex items-center gap-3.5">
+            <div class="w-12 h-12 rounded-2xl bg-amber-100 text-amber-800 border border-amber-300 flex items-center justify-center text-2xl shrink-0 shadow-xs">
+              ♟️
+            </div>
+            <div>
+              <h3 class="text-lg sm:text-xl font-bold text-slate-950 tracking-tight">Checkora — Open-Source Chess Platform & Engine</h3>
+              <p class="text-xs font-mono font-bold text-amber-800 mt-0.5">10 Successfully Merged Pull Requests</p>
+            </div>
+          </div>
+          <span class="px-3.5 py-1.5 rounded-full bg-amber-100 border border-amber-300 text-amber-950 text-xs font-mono font-bold w-fit shrink-0">
+            GSSoC Contributor
+          </span>
+        </div>
+
+        <!-- Clean, High-Contrast Table (With Fixed Column Widths) -->
+        <div class="overflow-x-auto rounded-2xl border border-amber-300 bg-[#fffdfa] shadow-xs">
+          <table class="w-full text-left text-xs font-mono text-slate-900 border-collapse min-w-[620px]">
+            <thead>
+              <tr class="border-b border-amber-200 bg-amber-100 text-slate-950 uppercase tracking-wider text-[11px]">
+                <th class="py-3.5 px-4 font-black w-24">PR #</th>
+                <th class="py-3.5 px-4 font-black">Description</th>
+                <th class="py-3.5 px-4 font-black text-right w-32">Category</th>
+              </tr>
+            </thead>
+            <tbody class="divide-y divide-amber-100">
+              <tr class="hover:bg-amber-50 transition">
+                <td class="py-3.5 px-4 text-amber-800 font-black whitespace-nowrap w-24">#2635</td>
+                <td class="py-3.5 px-4 text-slate-900 font-sans text-xs font-medium">Improved engine subprocess error diagnostics</td>
+                <td class="py-3.5 px-4 text-right whitespace-nowrap w-32">
+                  <span class="px-2.5 py-1 rounded-md bg-blue-100 text-blue-950 border border-blue-300 text-[11px] font-bold">Backend</span>
+                </td>
+              </tr>
+              <tr class="hover:bg-amber-50 transition">
+                <td class="py-3.5 px-4 text-amber-800 font-black whitespace-nowrap w-24">#2531</td>
+                <td class="py-3.5 px-4 text-slate-900 font-sans text-xs font-medium">Standardized editorconfig formatting rules across codebase</td>
+                <td class="py-3.5 px-4 text-right whitespace-nowrap w-32">
+                  <span class="px-2.5 py-1 rounded-md bg-slate-100 text-slate-950 border border-slate-300 text-[11px] font-bold">Tooling</span>
+                </td>
+              </tr>
+              <tr class="hover:bg-amber-50 transition">
+                <td class="py-3.5 px-4 text-amber-800 font-black whitespace-nowrap w-24">#2376</td>
+                <td class="py-3.5 px-4 text-slate-900 font-sans text-xs font-medium">Standardized trusted reverse proxy configuration</td>
+                <td class="py-3.5 px-4 text-right whitespace-nowrap w-32">
+                  <span class="px-2.5 py-1 rounded-md bg-purple-100 text-purple-950 border border-purple-300 text-[11px] font-bold">DevOps</span>
+                </td>
+              </tr>
+              <tr class="hover:bg-amber-50 transition">
+                <td class="py-3.5 px-4 text-amber-800 font-black whitespace-nowrap w-24">#1346</td>
+                <td class="py-3.5 px-4 text-slate-900 font-sans text-xs font-medium">Implemented password reset request rate limiting & throttling</td>
+                <td class="py-3.5 px-4 text-right whitespace-nowrap w-32">
+                  <span class="px-2.5 py-1 rounded-md bg-rose-100 text-rose-950 border border-rose-300 text-[11px] font-bold">Security</span>
+                </td>
+              </tr>
+              <tr class="hover:bg-amber-50 transition">
+                <td class="py-3.5 px-4 text-amber-800 font-black whitespace-nowrap w-24">#952</td>
+                <td class="py-3.5 px-4 text-slate-900 font-sans text-xs font-medium">Implemented custom fallback 500 error page</td>
+                <td class="py-3.5 px-4 text-right whitespace-nowrap w-32">
+                  <span class="px-2.5 py-1 rounded-md bg-emerald-100 text-emerald-950 border border-emerald-300 text-[11px] font-bold">Frontend</span>
+                </td>
+              </tr>
+              <tr class="hover:bg-amber-50 transition">
+                <td class="py-3.5 px-4 text-amber-800 font-black whitespace-nowrap w-24">#750</td>
+                <td class="py-3.5 px-4 text-slate-900 font-sans text-xs font-medium">Fixed password reset token reuse validation vulnerability</td>
+                <td class="py-3.5 px-4 text-right whitespace-nowrap w-32">
+                  <span class="px-2.5 py-1 rounded-md bg-rose-100 text-rose-950 border border-rose-300 text-[11px] font-bold">Security</span>
+                </td>
+              </tr>
+              <tr class="hover:bg-amber-50 transition">
+                <td class="py-3.5 px-4 text-amber-800 font-black whitespace-nowrap w-24">#669</td>
+                <td class="py-3.5 px-4 text-slate-900 font-sans text-xs font-medium">Adjusted chess piece scaling for responsive proportions</td>
+                <td class="py-3.5 px-4 text-right whitespace-nowrap w-32">
+                  <span class="px-2.5 py-1 rounded-md bg-teal-100 text-teal-950 border border-teal-300 text-[11px] font-bold">UI / Frontend</span>
+                </td>
+              </tr>
+              <tr class="hover:bg-amber-50 transition">
+                <td class="py-3.5 px-4 text-amber-800 font-black whitespace-nowrap w-24">#322</td>
+                <td class="py-3.5 px-4 text-slate-900 font-sans text-xs font-medium">Handled match draws from threefold repetition in engine rules</td>
+                <td class="py-3.5 px-4 text-right whitespace-nowrap w-32">
+                  <span class="px-2.5 py-1 rounded-md bg-amber-100 text-amber-950 border border-amber-300 text-[11px] font-bold">Game Logic</span>
+                </td>
+              </tr>
+            </tbody>
+          </table>
+        </div>
+      </div>
+
+      <!-- hybrid-recommender Card -->
+      <div class="p-6 rounded-2xl bg-white border border-amber-300 shadow-sm flex flex-col sm:flex-row sm:items-center justify-between gap-4">
+        <div class="flex items-center gap-3">
+          <div class="w-10 h-10 rounded-xl bg-teal-100 text-teal-800 flex items-center justify-center text-xl shrink-0">
+            🤖
+          </div>
+          <div>
+            <h4 class="text-base font-bold text-slate-950">hybrid-recommender — Machine Learning System</h4>
+            <p class="text-xs text-slate-800 font-mono font-semibold mt-0.5">PR #985: Added unified diagnostics CLI for project setup verification</p>
+          </div>
+        </div>
+        <span class="px-3 py-1 rounded-md bg-teal-100 text-teal-950 border border-teal-300 text-xs font-mono font-bold shrink-0">
+          CLI / DevTools
+        </span>
+      </div>
+
+    </div>
+  </section>
+
+  <!-- Experience & Achievements -->
+  <section id="experience" class="relative z-10 py-16 border-t border-amber-200">
+    <div class="max-w-5xl mx-auto px-6">
+      <div class="grid md:grid-cols-2 gap-10">
+
+        <!-- Experience & Education -->
+        <div>
+          <div class="mb-8">
+            <span class="px-3 py-1 rounded-full text-xs font-mono font-bold uppercase tracking-wider bg-amber-200 border border-amber-300 text-amber-950">Background</span>
+            <h2 class="text-3xl font-extrabold text-slate-950 mt-3">Education & Internships</h2>
+          </div>
+
+          <div class="space-y-4">
+            <!-- TMSL -->
+            <div class="p-6 rounded-2xl bg-white border border-amber-300 hover:border-amber-500 transition shadow-sm">
+              <div class="flex justify-between items-start">
+                <h4 class="text-slate-950 font-bold text-base">B.Tech in Electronics & Communication</h4>
+                <span class="text-xs font-mono font-bold text-amber-950 px-2 py-0.5 rounded bg-amber-100 border border-amber-300">3rd Year</span>
+              </div>
+              <p class="text-xs font-mono font-semibold text-slate-800 mt-1">Techno Main Salt Lake, Sector V, Kolkata</p>
+              <p class="text-xs font-mono text-emerald-900 font-bold mt-2">Cumulative GPA: 8.23 / 10</p>
+            </div>
+
+            <!-- CodeAlpha -->
+            <div class="p-6 rounded-2xl bg-white border border-amber-300 hover:border-teal-500 transition shadow-sm">
+              <div class="flex justify-between items-start">
+                <h4 class="text-slate-950 font-bold text-base">C++ Virtual Intern • CodeAlpha</h4>
+                <span class="text-xs font-mono font-bold text-slate-700">Jan 2026</span>
+              </div>
+              <p class="text-xs font-mono text-teal-900 font-bold mt-1">Built CGPA Calculator & Login System with memory management</p>
+              <p class="text-xs text-slate-800 font-medium mt-2">Awarded formal Letter of Recommendation (LOR) for code quality.</p>
+            </div>
+
+            <!-- Schooling -->
+            <div class="p-6 rounded-2xl bg-white border border-amber-300 shadow-sm">
+              <h4 class="text-slate-950 font-bold text-base">DAV Public School Kathara (CBSE)</h4>
+              <p class="text-xs font-mono font-semibold text-slate-800 mt-1">Bokaro, Jharkhand</p>
+              <p class="text-xs font-mono text-amber-950 mt-2 font-bold">Class 12th PCM: 80.2% | Class 10th: 87.0%</p>
+            </div>
+          </div>
+        </div>
+
+        <!-- Certifications -->
+        <div>
+          <div class="mb-8">
+            <span class="px-3 py-1 rounded-full text-xs font-mono font-bold uppercase tracking-wider bg-amber-200 border border-amber-300 text-amber-950">Credentials</span>
+            <h2 class="text-3xl font-extrabold text-slate-950 mt-3">Certifications & Contests</h2>
+          </div>
+
+          <div class="space-y-3 font-mono text-xs">
+            <div class="p-4 rounded-xl bg-white border border-amber-300 flex items-start gap-3.5 shadow-xs">
+              <div class="w-8 h-8 rounded-lg bg-amber-100 text-amber-800 flex items-center justify-center shrink-0 text-sm">
+                <i class="fa-solid fa-trophy"></i>
+              </div>
+              <div>
+                <p class="text-slate-950 font-bold text-sm font-sans">TCS CodeVita Season 13</p>
+                <p class="text-slate-800 font-medium mt-0.5">Competed and qualified in the prestigious global programming contest.</p>
+              </div>
+            </div>
+
+            <div class="p-4 rounded-xl bg-white border border-amber-300 flex items-start gap-3.5 shadow-xs">
+              <div class="w-8 h-8 rounded-lg bg-emerald-100 text-emerald-800 flex items-center justify-center shrink-0 text-sm">
+                <i class="fa-solid fa-code"></i>
+              </div>
+              <div>
+                <p class="text-slate-950 font-bold text-sm font-sans">GeeksforGeeks 160 Days of Problem Solving</p>
+                <p class="text-slate-800 font-medium mt-0.5">Completed 160 consecutive days of rigorous Data Structures & Algorithms challenges.</p>
+              </div>
+            </div>
+
+            <div class="p-4 rounded-xl bg-white border border-amber-300 flex items-start gap-3.5 shadow-xs">
+              <div class="w-8 h-8 rounded-lg bg-blue-100 text-blue-800 flex items-center justify-center shrink-0 text-sm">
+                <i class="fa-brands fa-aws"></i>
+              </div>
+              <div>
+                <p class="text-slate-950 font-bold text-sm font-sans">AWS Academy Graduate - Cloud Architecting</p>
+                <p class="text-slate-800 font-medium mt-0.5">Certified in secure distributed multi-tier architectures on Amazon Web Services.</p>
+              </div>
+            </div>
+
+            <div class="p-4 rounded-xl bg-white border border-amber-300 flex items-start gap-3.5 shadow-xs">
+              <div class="w-8 h-8 rounded-lg bg-purple-100 text-purple-800 flex items-center justify-center shrink-0 text-sm">
+                <i class="fa-solid fa-brain"></i>
+              </div>
+              <div>
+                <p class="text-slate-950 font-bold text-sm font-sans">Google & Kaggle AI Agents Intensive</p>
+                <p class="text-slate-800 font-medium mt-0.5">Trained in LLM orchestration, structured agent workflows, and prompt engineering.</p>
+              </div>
+            </div>
+
+            <div class="p-4 rounded-xl bg-white border border-amber-300 flex items-start gap-3.5 shadow-xs">
+              <div class="w-8 h-8 rounded-lg bg-orange-100 text-orange-800 flex items-center justify-center shrink-0 text-sm">
+                <i class="fa-solid fa-database"></i>
+              </div>
+              <div>
+                <p class="text-slate-950 font-bold text-sm font-sans">GeeksforGeeks SQL Skill Up</p>
+                <p class="text-slate-800 font-medium mt-0.5">Proficiency in joins, nested queries, index optimization, and relational schema design.</p>
+              </div>
+            </div>
+          </div>
+        </div>
+
+      </div>
+    </div>
+  </section>
+
+  <!-- Connect Section -->
+  <section id="contact" class="relative z-10 py-20 border-t border-amber-200 overflow-hidden bg-gradient-to-b from-[#fcfaf2] to-amber-100/60">
+    <div class="max-w-4xl mx-auto px-6 text-center">
+      <div class="inline-block p-1 rounded-full bg-gradient-to-r from-amber-400 via-orange-400 to-amber-500 mb-6 shadow-xs">
+        <span class="px-4 py-1.5 rounded-full bg-white text-xs font-mono font-bold text-amber-950 block">Let's Connect</span>
+      </div>
+      <h2 class="text-3xl md:text-5xl font-black text-slate-950 tracking-tight mb-4">
+        Ready to collaborate on something <span class="text-transparent bg-clip-text bg-gradient-to-r from-amber-700 via-orange-600 to-amber-800">impactful?</span>
+      </h2>
+      <p class="text-slate-800 font-medium max-w-xl mx-auto text-sm md:text-base mb-8">
+        Open for Software & Embedded engineering roles, internships, and open-source collaborations.
+      </p>
+
+      <div class="flex flex-wrap items-center justify-center gap-4">
+        <a href="mailto:shubhamjrd4559@gmail.com" class="px-8 py-3.5 rounded-xl bg-gradient-to-r from-amber-600 via-orange-600 to-amber-700 text-white font-bold text-sm hover:scale-105 transition transform shadow-lg shadow-amber-600/25 flex items-center gap-2">
+          <i class="fa-regular fa-envelope"></i> Send an Email
+        </a>
+        <a href="https://linkedin.com/in/shubham-kumar-6bb4b7344" target="_blank" class="px-8 py-3.5 rounded-xl bg-white border border-amber-300 hover:border-amber-500 text-slate-900 font-bold text-sm hover:scale-105 transition transform flex items-center gap-2 shadow-xs">
+          <i class="fa-brands fa-linkedin text-blue-700"></i> LinkedIn
+        </a>
+      </div>
+    </div>
+  </section>
+
+  <!-- Footer -->
+  <footer class="relative z-10 py-8 border-t border-amber-200 bg-white text-xs font-mono text-slate-800 text-center">
+    <div class="max-w-6xl mx-auto px-6 flex flex-col sm:flex-row items-center justify-between gap-4">
+      <p class="font-semibold">© 2026 Shubham Kumar • Built for precision & scale</p>
+      <div class="flex items-center gap-6 font-bold text-slate-900">
+        <a href="https://github.com/shubhamjrd4559-sudo" target="_blank" class="hover:text-amber-700 transition">GitHub</a>
+        <a href="https://linkedin.com/in/shubham-kumar-6bb4b7344" target="_blank" class="hover:text-amber-700 transition">LinkedIn</a>
+        <a href="https://leetcode.com/u/Shubh_5585" target="_blank" class="hover:text-amber-700 transition">LeetCode</a>
+        <a href="https://www.codechef.com/users/shubham_1855" target="_blank" class="hover:text-amber-700 transition">CodeChef</a>
+      </div>
+    </div>
+  </footer>
+
+</body>
+</html>
